@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import { Card, CardActions } from "@mui/material";
 import Button from "./Button";
 import { getDadJoke } from "./services/jokeService";
 
@@ -19,8 +20,11 @@ export default function Dadjokes() {
     <div className="container">
       <h1>Dad Joke Generator</h1>
       <div className="joke-container">
-        <p>{joke}</p>
+        <Card>
+          <p>{joke}</p>
+        </Card>
       </div>
+
       <div className="pushButton">
         <Button onClick={generateJoke} text="Generate" />
       </div>
