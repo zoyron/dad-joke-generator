@@ -20,9 +20,7 @@ export default function Dadjokes() {
     <div className="container">
       <h1>Dad Joke Generator</h1>
       <div className="joke-container">
-        <Card>
-          <p>{joke}</p>
-        </Card>
+        <p>{joke}</p>
       </div>
 
       <div className="pushButton">
