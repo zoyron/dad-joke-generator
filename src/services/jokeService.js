@@ -2,7 +2,6 @@ export async function getDadJoke() {
   const response = await fetch("https://icanhazdadjoke.com/", {
     headers: {
       accept: 'application/json',
-      accept: 'text/plain',
       'User-Agent': 'My Library',
     }
   });

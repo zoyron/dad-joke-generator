@@ -5,7 +5,7 @@ import { getDadJoke } from "./services/jokeService";
 
 export default function Dadjokes() {
   const [joke, setJoke] = useState('Click on the button to generate a Dad Joke')
-  const generateJoke = () {
+  const generateJoke = async () => {
     try {
       const newJoke = await getDadJoke();
       setJoke(newJoke);
@@ -15,8 +15,15 @@ export default function Dadjokes() {
     }
   }
 
-  return <>
-    <h2>{joke}</h2>
-    <Button onClick={generateJoke} text="Generate" />
-  </>
+  return (
+    <div className="container">
+      <h1>Dad Joke Generator</h1>
+      <div className="joke-container">
+        <p>{joke}</p>
+      </div>
+      <div className="pushButton">
+        <Button onClick={generateJoke} text="Generate" />
+      </div>
+    </div>
+  );
 }
